@@ -1,0 +1,53 @@
+.sidebar {
+    width: 250px;
+    background-color: #0F212E;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+    width: 60px;
+    padding: 10px 0;
+}
+
+.close-button-container {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+}
+
+.close-button {
+    width: 32px;
+    height: 32px;
+    background-color: #1A2C38;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+    outline: 2px solid #2A3C48;
+    outline-offset: 2px;
+}
+
+.close-button:hover {
+    background-color: #2A3C48;
+    outline-color: #3A4C58;
+}
+
+.close-button svg {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg); /* Start rotated */
+}
+
+.sidebar.closed .close-button svg {
+    transform: rotate(0deg); /* Return to original position when closed */
+}
